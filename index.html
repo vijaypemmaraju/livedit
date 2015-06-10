@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="stylesheet.css">
+         <script type="text/javascript" src="external/log4javascript.js"></script>
+    <script type="text/javascript">
+        var appender = new log4javascript.InPageAppender();
+        log4javascript.getRootLogger().addAppender(appender);
+        var log = log4javascript.getRootLogger();
+        log4javascript.setShowStackTraces(true);
+    </script>
+        <script src="lib/rangy-core.js"></script>
+        <script src="lib/rangy-selectionsaverestore.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="editor.js"></script>
+	</head>
+	
+	<body spellcheck="false">
+        <span class="editor-container">
+            <pre class="editor" contenteditable="true"></pre>
+        </span>
+        <span class="preview-container">
+            <iframe class="preview"></iframe>
+        </span>
+	</body>
+</html>
+	
